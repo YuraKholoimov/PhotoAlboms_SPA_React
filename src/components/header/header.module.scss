@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
+@mixin centercenter(){
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header {
+    height: 250px;
+    position: relative;
+    background-color: #282c34;
+}
+
+div{
+  top:5px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  &:before, &:after{
+    content: '';
+    position: absolute;
+    display: block;
+    box-sizing: border-box;
+  }
+}
+
+body{
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vw;
+  background: #333;
+  
+  & .message{
+    position: absolute;
+    right:  0.5vw;
+    bottom: 1vw;
+    max-width: 30vw;
+    font-size: 0.35em;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+
+    & a{
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid #444;
+      &:hover{
+        border-width: 3px;
+      }
+    }
+
+  }
+  
+  & .hamburger{
+    position: absolute;
+    @include centercenter();
+    width: 15vw;
+    height: 17.5vw;
+    text-align: center;
+    &:hover{
+      & .ham, & .bur, & .ger{
+        height: 3vw;
+        
+      }
+      & .top{
+        height: 3vw;
+        margin: 0;
+        border-radius: 5em 5em 0.5em 0.5em;
+      }
+      & .middle{
+        height: 0.5vw;
+        margin: 0;
+        border-radius: 0.25em 0.25em 0.35em 0.35em;
+        background: #ffca01;
+        overflow: visible;
+        &:after{
+          border-left-width: 8.5vw;
+          border-right-width: 0.5vw;
+          border-top: 1.5vw solid #ffca01;
+          transition: all 1s ease;
+        }
+      }
+      & .bottom{
+        height: 2vw;
+        margin: 0;
+        border-radius: 0.25em 0.25em 0.35em 0.35em;
+      }
+    }
+    
+    & > div{
+      position: relative;
+      width: 15vw;
+      height: .1vw;
+      transition: all 1s ease;
+      
+    }
+    
+    & .top, & .middle, & .bottom{
+      height: 2vw;
+      border-radius: 0.15em;
+      margin: .2em 0;
+      background: #eba300;
+    }
+    
+    & .middle:after{
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      transition: all 1s ease;
+      z-index: 1;
+    }
+    
+    & .ham > a{
+        text-decoration: none;
+      height: 0;
+      color: #179f0e;
+      font-size: 2.3vw;
+      font-weight:900;
+      line-height: 0.2em;
+      transform: scaleX(2.8);
+    }
+    
+    &  .bur> a{
+        text-decoration: none;
+      height: 0;
+      color: #ee3b17;
+      font-size: 3.3vw;
+      font-weight: 900;
+      line-height: 1em;
+      transform: scaleX(1.8);
+    }
+    
+    & .ger> a {
+        text-decoration: none;
+      height: 0;
+      color: #8e562e;
+      font-size: 3.6vw;
+      line-height: .9em;
+      font-weight: 900;
+      transform: scaleX(.8);
+    }
+    
+  }
+  
+}
