@@ -1,13 +1,8 @@
 body {
-    margin: 0;
-    min-height: 400vh;
-    background: #000;
-    font-family: sans-serif;
+  .wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
   }
-  
   .container {
     display: flex;
     justify-content: center;
@@ -15,7 +10,7 @@ body {
     margin: 10vmin;
     overflow: hidden;
     transform: skew(5deg);
-  
+    
     .card {
       flex: 1;
       transition: all 1s ease-in-out;
@@ -35,11 +30,10 @@ body {
         left: 0;
         font-size: 1em;
         white-space: nowrap;
+
         a {
           text-decoration: none;
-          
         }
-
       }
   
       &:hover {
@@ -69,3 +63,4 @@ body {
       }
     }
   }
+}

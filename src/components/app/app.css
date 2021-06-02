@@ -1,0 +1,27 @@
+body{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vw;
+    background: rgb(71, 30, 71);
+}
+
+.mainSection {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 200vh;
+    background-color: rgb(91, 67, 67);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:10px solid rgb(179, 125, 27) ;
+}
+
+
