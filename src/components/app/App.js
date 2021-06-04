@@ -9,17 +9,16 @@ import './app.css'
 import AboutMe from '../about-me/aboutMe'
 import Notice from '../notice/notice'
 
+
+
 const Alboms = () => {
   return (
     <>
-    <Albom1 note="Plotting Cat"/>
-    <Albom2 />
+      <Albom1 note="Plotting Cat"/>
+      <Albom2 />
     </>
   )
-   
-
 }
-
 
 function App() {
   return (
